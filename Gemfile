@@ -60,3 +60,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+gem 'rspec-rails' #ここに追加をします
+gem 'rails-i18n'
+gem 'pry-rails'
