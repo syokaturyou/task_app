@@ -1,6 +1,5 @@
  <h3>スケジュール一覧</h3>
  
- 
  <table>
   <thead>
    <tr>
@@ -23,7 +22,7 @@
      <td><%= schedule.title %></td>
      <td><%= schedule.startdate %></td>
      <td><%= schedule.enddate %></td>
-     <td><%= schedule.endcheck %></td>
+     <td></td>
      <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
      <td><%= link_to "確認", schedule %></td>
      <td><%= link_to "編集", [:edit, schedule] %></td>
