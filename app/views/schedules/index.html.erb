@@ -1,5 +1,9 @@
  <h2>スケジュール一覧</h2>
  
+ <% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+ <% end %>
+ 
  <table>
   <thead>
    <tr>
@@ -20,8 +24,8 @@
     <tr>
      <td><%= schedule.id %></td>
      <td><%= schedule.title %></td>
-     <td><%= schedule.startdate.to_s(:datetime_jp)  %></td>
-     <td><%= schedule.enddate.to_s(:datetime_jp)  %></td>
+     <td><%= schedule.startdate.strftime("%Y年 %m月 %d日")  %></td>
+     <td><%= schedule.enddate.strftime("%Y年 %m月 %d日")  %></td>
      <td><%= '〇' if schedule.checkend == true %></td>
      <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
      <td><%= link_to "確認", schedule %></td>

@@ -18,7 +18,7 @@ class SchedulesController < ApplicationController
     # binding.pry
     if @schedule.save
     # binding.pry
-      # flash[:notice] = "ユーザーを新規登録しました"
+      flash[:notice] = "スケジュールを新規登録しました"
       redirect_to :schedules
     else
       # binding.pry
@@ -33,7 +33,7 @@ class SchedulesController < ApplicationController
   def update
      @schedule = Schedule.find(params[:id])
     if @schedule.update(schedule_params)
-      flash[:notice] = "ユーザーIDが「#{@schedule.id}」の情報を更新しました"
+      flash[:notice] = "スケジュールを更新しました"
       redirect_to :schedules
     else
       render "edit"
@@ -43,7 +43,7 @@ class SchedulesController < ApplicationController
   def destroy
     @schedule = Schedule.find(params[:id])
     @schedule.destroy
-    flash[:notice] = "ユーザーを削除しました"
+    flash[:notice] = "スケジュールを削除しました"
     redirect_to :schedules
   end
   
