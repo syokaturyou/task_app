@@ -1,4 +1,4 @@
-<h3>スケジュール新規登録</h3>
+<h3>スケジュール編集</h3>
  <%= render "shared/error", obj: @schedule %>
  
  <%= form_with(model: @schedule, local: true) do |f| %>
@@ -16,7 +16,6 @@
       <th><%= f.date_field :enddate %></th>
     </tr>
     <tr>
-     
     </tr>
     <tr>
       <th><%= f.label :schedulememo ,"スケジュールメモ" %></th>
@@ -24,6 +23,6 @@
     </tr>
   </table>
 
-      <li><%= f.submit "スケジュールを新規登録する"%></li>
+      <li><%= f.submit "スケジュール編集を完了する" %></li>
   <% end %>
       <li><%= link_to "スケジュール一覧に戻る", :schedules %></li>

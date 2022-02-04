@@ -27,12 +27,24 @@ class SchedulesController < ApplicationController
   end
   
   def edit
+    @schedule = Schedule.find(params[:id])
   end
   
   def update
+     @schedule = Schedule.find(params[:id])
+    if @schedule.update(schedule_params)
+      flash[:notice] = "ユーザーIDが「#{@schedule.id}」の情報を更新しました"
+      redirect_to :schedules
+    else
+      render "edit"
+    end
   end
   
   def destroy
+    @schedule = Schedule.find(params[:id])
+    @schedule.destroy
+    flash[:notice] = "ユーザーを削除しました"
+    redirect_to :schedules
   end
   
   private

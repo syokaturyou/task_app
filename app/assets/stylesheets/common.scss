@@ -1,6 +1,7 @@
 header {
       width: 100%;
       padding: 15px;
+      background-color: red;
       margin-bottom: 30px;
       border-bottom: 7px solid orange;
     }
@@ -8,6 +9,27 @@ header {
     footer{
       width: 100%;
       padding: 15px;
+      background-color: red;
       margin-top: 30px;
       border-top: 7px solid orange;
+    }
+    
+    table th {
+        background-color: #fbc25b;
+        padding: 10px 20px;
+    }
+ 
+    table td {
+        background-color: #f9ecd5;
+        padding: 10px 20px;
+    }
+ 
+    .notice {
+        background-color: #ccf;
+        padding: 5px;
+    }
+    
+     .posts-content {
+        width: 350px;
+        height: 200px;
     }
