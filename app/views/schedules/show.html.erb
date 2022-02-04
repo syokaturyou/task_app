@@ -1,24 +1,27 @@
 <h2>スケジュール詳細</h2>
  
  <table>
-  <thead>
+  <tbody>
    <tr>
     <th>タイトル</th>
-    <th>開始日</th>
-    <th>投稿日時</th>
-    <th>終日</th>
-    <th>スケジュールメモ</th>
+    <td><%= @schedule.title %></td>
    </tr>
-  </thead>
-  
-  <tbody>
-    <tr>
-     <td><%= @schedule.title %></td>
-     <td><%= @schedule.startdate %></td>
-     <td><%= @schedule.created_at.to_s(:datetime_jp) %></td>
-     <td></td>
-     <td><%= @schedule.schedulememo %></td>
-    </tr>
+   <tr>
+    <th>開始日</th>
+    <td><%= @schedule.startdate %></td>
+   </tr>
+   <tr>
+    <th>投稿日時</th>
+    <td><%= @schedule.created_at.to_s(:datetime_jp) %></td>
+   </tr>
+   <tr>
+    <th>終日</th>
+    <td><%= '〇' if @schedule.checkend == true %></td>
+   </tr>
+   <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @schedule.schedulememo %></td>
+   </tr>
   </tbody>
  </table>
  

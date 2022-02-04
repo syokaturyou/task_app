@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_110459) do
+ActiveRecord::Schema.define(version: 2022_02_04_061515) do
 
   create_table "schedules", force: :cascade do |t|
     t.string "title"
     t.date "startdate"
     t.date "enddate"
-    t.boolean "endcheck"
     t.string "schedulememo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "checkend", default: false, null: false
   end
 
 end

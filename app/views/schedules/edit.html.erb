@@ -16,6 +16,10 @@
       <th><%= f.date_field :enddate %></th>
     </tr>
     <tr>
+      <th><%= f.label :checkend, "終日" %></th>
+      <th><%= f.check_box :checkend, {}, true, false %>
+       終日の場合はチェックを入れます
+      </th>
     </tr>
     <tr>
       <th><%= f.label :schedulememo ,"スケジュールメモ" %></th>
@@ -23,6 +27,6 @@
     </tr>
   </table>
 
-      <li><%= f.submit "スケジュール編集を完了する" %></li>
+      <p><%= f.submit "スケジュール編集を完了する" %></p>
   <% end %>
-      <li><%= link_to "スケジュール一覧に戻る", :schedules %></li>
+      <p><%= link_to "スケジュール一覧に戻る", :schedules %></p>
