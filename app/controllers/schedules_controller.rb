@@ -14,14 +14,10 @@ class SchedulesController < ApplicationController
   
   def create
     @schedule = Schedule.new(schedule_params)
-    # @schedule = Schedule.new(params.require(:schedule).permit(:title, :startdate, :enddate, :schedulememo))
-    # binding.pry
     if @schedule.save
-    # binding.pry
       flash[:notice] = "スケジュールを新規登録しました"
       redirect_to :schedules
     else
-      # binding.pry
       render "new"
     end
   end
