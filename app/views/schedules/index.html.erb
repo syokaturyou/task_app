@@ -24,15 +24,15 @@
   <tbody>
    <% @schedules.each do |schedule| %>
     <tr>
-     <th><%= schedule.id %></th>
-     <th><%= schedule.title %></th>
-     <th><%= schedule.startdate.strftime("%Y年 %m月 %d日")  %></th>
-     <th><%= schedule.enddate.strftime("%Y年 %m月 %d日")  %></th>
-     <th><%= '〇' if schedule.checkend == true %></th>
-     <th><%= schedule.updated_at.to_s(:datetime_jp) %></th>
-     <th><%= link_to "確認", schedule %></th>
-     <th><%= link_to "編集", [:edit, schedule] %></th>
-     <th><%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %></th>
+     <td><%= schedule.id %></td>
+     <td><%= schedule.title %></td>
+     <td><%= schedule.startdate.strftime("%Y年 %m月 %d日")  %></td>
+     <td><%= schedule.enddate.strftime("%Y年 %m月 %d日")  %></td>
+     <td><%= '〇' if schedule.checkend == true %></td>
+     <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+     <td><%= link_to "確認", schedule %></td>
+     <td><%= link_to "編集", [:edit, schedule] %></td>
+     <td><%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
     </tr>
    <% end %>
   </tbody>
@@ -40,9 +40,8 @@
  
  <p><%= link_to "スケジュール新規登録", :new_schedule %></p>
  
- 
  <% content_for :footer do %>
-     スケジュール合計<% @schedule %>
+     スケジュール合計:<%= @schedules_count %>
  <% end %>
  
  

@@ -22,7 +22,6 @@ header {
     table th {
         background-color: #FFDFDF;
         padding: 10px 20px;
-        // width: 400px;
     }
  
     table td {
@@ -30,7 +29,6 @@ header {
         padding: 10px 20px;
         vertical-align: inherit;
         text-align: center;
-        width: 300px;
     }
  
     .notice {
@@ -42,4 +40,9 @@ header {
      .posts-content {
         width: 350px;
         height: 200px;
+    }
+    
+    .date {
+      width: 310px;
+      height: 30px;
     }

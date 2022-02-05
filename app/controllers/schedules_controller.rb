@@ -2,8 +2,7 @@ class SchedulesController < ApplicationController
   
   def index
     @schedules = Schedule.all
-    
-    @schedule = Schedule.count
+    @schedules_count = Schedule.count
   end
   
   def show
