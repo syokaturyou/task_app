@@ -14,14 +14,23 @@ header {
       margin-top: 30px;
     }
     
+    table {
+        border: 2px #808080 solid;
+        rules: all;
+    }
+    
     table th {
         background-color: #FFDFDF;
         padding: 10px 20px;
+        // width: 400px;
     }
  
     table td {
         background-color: #f1c8c861;
         padding: 10px 20px;
+        vertical-align: inherit;
+        text-align: center;
+        width: 300px;
     }
  
     .notice {
