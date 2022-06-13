@@ -5,7 +5,6 @@ class Schedule < ApplicationRecord
   validates :enddate, presence: true
   validates :checkend, inclusion: {in: [true, false]}
   
-  
   validate :start_end_check
   validate :date_before_start
 
